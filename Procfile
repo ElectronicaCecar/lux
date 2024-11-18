@@ -1,3 +1,3 @@
-web: build/install/com.kuby.AuthServer/bin/com.kuby.AuthServer
+web: build/install/com.cecar.lux/bin/com.cecar.lux
 worker: python scheduler.py
 
