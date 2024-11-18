@@ -6,7 +6,7 @@ val KMongoVersion: String by project
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
-    id("io.ktor.plugin") version "2.3.6"
+    alias(libs.plugins.ktor)
     id("org.jetbrains.kotlin.plugin.serialization") version "1.9.20"
 }
 
