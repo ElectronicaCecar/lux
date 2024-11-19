@@ -13,7 +13,7 @@ import java.time.LocalDateTime
 fun Route.updateReleStatusRoute(
     releDataSource: ReleDataSource
 ) {
-    post("/update") { // Ruta para actualizar el estado del relé
+    put("/update") { // Ruta para actualizar el estado del relé
         try {
             // Obtener datos de la solicitud
             val releRequest = call.receive<Rele>()

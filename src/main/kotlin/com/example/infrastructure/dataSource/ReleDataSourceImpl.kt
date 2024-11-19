@@ -37,13 +37,13 @@ class ReleDataSourceImpl(
     }
 
 
-    override suspend fun updateReleStatus(id: String, status: Boolean, updatedAt: String): Boolean {
+    override suspend fun updateReleStatus(idStacion: String, status: Boolean, updatedAt: String): Boolean {
         val updates = combine(
             setValue(Rele::status, status),
             setValue(Rele::updatedAt, updatedAt),
         )
         return reles.updateOne(
-            filter = Rele::id eq id,
+            filter = Rele::idStacion eq idStacion,
             update = updates
         ).wasAcknowledged()
     }
